@@ -1,0 +1,52 @@
+section.services {
+    padding: min(150px, 20vw) 0;
+}
+
+div.image-showcase {
+    aspect-ratio: 2 / 1;
+    gap: 1rem;
+}
+
+section.services div.image-grid {
+	display: grid;
+	width: 100%;
+	grid-gap: 1rem;
+    grid-auto-flow: dense;
+}
+
+section.services div.carbon div.image-grid {
+    /* height: calc(100% - var(--h2-height)); */
+    height: calc(100% - var(--h2-size) - 2rem);
+	grid-template-columns: repeat(11, 1fr);
+	grid-template-rows: repeat(12, 1fr);
+}
+
+section.services div.paint div.image-grid {
+	grid-template-columns: repeat(13, 1fr);
+	grid-template-rows: repeat(13, 1fr);
+}
+
+section.services div.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+div.description-container {
+    margin: 75px 0;
+    display: flex;
+    gap: 3rem;
+}
+
+div.service-description {
+    width: 33.333%;
+    gap: 3rem;
+}
+
+div.service-description h3 {
+    margin-bottom: 3rem;
+}
+
+div.service-description p:not(:last-child) {
+    margin-bottom: 1.5rem;
+}

@@ -1,0 +1,16 @@
+footer {
+    padding: 5rem 0;
+    background-color: var(--bask-blue);
+}
+
+footer * {
+    color: white;
+}
+
+footer h1 {
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: black;
+}

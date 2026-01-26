@@ -1,0 +1,6 @@
+section.landing-images img.main {
+    width: 100%;
+    height: min(75vh, 900px);
+    object-fit: cover;
+    object-position: 50% 30%;
+}

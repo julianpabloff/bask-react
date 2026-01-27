@@ -5,15 +5,16 @@ import Image from '../../../components/Image';
 
 import './style.css';
 
-function Landing() {
-    const mainImage: IImage = useImage('s5.jpg');
+export default function Landing() {
+    const s5: IImage = useImage('s5.jpg');
+    const s5Mobile: IImage = useImage('s5-mobile.jpg');
 
     return (
         <section className="landing-images">
             <picture>
-                <source media="(width <= 600px)" srcSet={mainImage.src} />
-                <source media="(width > 600px)" srcSet={mainImage.src} />
-                <img className="main" src={mainImage.src} alt="Cervelo S5" />
+                <source media="(width <= 600px)" srcSet={s5Mobile.src} />
+                <source media="(width > 600px)" srcSet={s5.src} />
+                <img className="main" src={s5.src} alt="Cervelo S5" />
             </picture>
             <div className="landing-grid flex">
                 <div className="half">
@@ -28,5 +29,3 @@ function Landing() {
         </section>
     );
 }
-
-export default Landing;

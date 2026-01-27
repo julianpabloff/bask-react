@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 
 import '../styles.css';
 
-function Layout() {
+export default function Layout() {
     return (
         <>
             <Header/>
@@ -13,5 +13,3 @@ function Layout() {
         </>
     );
 }
-
-export default Layout;

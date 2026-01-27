@@ -50,3 +50,37 @@ div.service-description h3 {
 div.service-description p:not(:last-child) {
     margin-bottom: 1.5rem;
 }
+
+div.misc-info {
+    max-width: 47rem;
+    align-self: center;
+}
+
+div.misc-info p.top-right {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+div.misc-info p {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 700px) {
+    div.image-showcase {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    div.image-showcase div.half {
+        width: 100%;
+    }
+    div.image-grid {
+        aspect-ratio: 1 / 1;
+        height: auto;
+    }
+    div.service-description {
+        width: 100%;
+        margin: 40px 0 30px 0;
+    }
+}

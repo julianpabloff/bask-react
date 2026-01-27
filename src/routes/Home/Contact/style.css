@@ -1,0 +1,86 @@
+section.contact {
+    margin: 150px 0;
+}
+
+section.contact > div {
+    gap: min(4rem, var(--side-padding));
+}
+
+section.contact h2 {
+    margin-bottom: 3rem;
+}
+
+section.contact p:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+section.contact form {
+    max-width: 35rem;
+    height: min-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1.5rem 1rem;
+}
+
+section.contact label {
+    margin-bottom: 0.5em;
+}
+
+section.contact label span {
+    color: grey;
+    margin-left: 0.3em;
+}
+
+input, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+    background: none;
+    border-radius: 2em;
+}
+
+input, textarea {
+    /* height: min-content; */
+    width: 100%;
+    padding: 1em;
+    border: 1px solid black;
+    /* outline-offset: 0.2em; */
+}
+
+textarea {
+    resize: vertical;
+    min-height: 8rem;
+    max-height: 16rem;
+}
+
+button {
+    width: min-content;
+    white-space: nowrap;
+    padding: 1.3rem 2rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--bask-blue);
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: var(--bask-purple);
+}
+
+input:focus, textarea:focus {
+    outline: 0.3em solid var(--bask-blue);
+}
+
+section.contact .span2 {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 800px) {
+    section.contact > div {
+        flex-direction: column;
+        gap: 4rem;
+    }
+    section.contact .half {
+        width: 100%;
+    }
+}

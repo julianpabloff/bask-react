@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-export default function useScrollY(callback: () => void): number {
-    const [scrollPos, setScrollPos] = useState<number>(0);
+export default function useScrollY(callback?: (s: number) => void): number {
+    const [scrollPos, setScrollPos] = useState<number>(window.scrollY);
 
     const handleScroll = () => setScrollPos(window.scrollY);
 
@@ -11,8 +11,8 @@ export default function useScrollY(callback: () => void): number {
     }, []);
 
     useEffect(() => {
-        callback(scrollPos);
+        if (callback) callback(scrollPos);
     }, [scrollPos]);
 
-    return { scrollPos };
+    return scrollPos;
 }

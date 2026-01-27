@@ -1,3 +1,5 @@
+import useWindowWidth from '../../../utils/useWindowWidth';
+
 import Image from '../../../components/Image';
 
 import './style.css';
@@ -48,9 +50,13 @@ function DecalDescription() {
 }
 
 function MiscInfo() {
+    let windowWidth = useWindowWidth();
     return (
         <div className="misc-info">
-            <p className="top-right">YOU CAN FIND MORE INFORMATION AND PORTFOLIO IN THE TABS ON THE TOP RIGHT</p>
+            {windowWidth > 700
+                ? <p className="top-right">YOU CAN FIND MORE INFORMATION AND PORTFOLIO WITH THE LINKS ON THE TOP RIGHT</p>
+                : <p className="top-right">YOU CAN FIND MORE INFORMATION AND PORTFOLIO WITH THE LINKS AT THE TOP</p>
+            }
             <p>Preferred vendor for:
                 <a href="http://www.austintricyclist.com/">Austin Tricyclist</a>,
                 <a href="https://austinbikefarm.com/">Austin Bike Farm</a>,
@@ -63,12 +69,15 @@ function MiscInfo() {
 }
 
 export default function Services() {
+    let windowWidth = useWindowWidth();
+
     return (
         <section className="services max-w-container">
             <div className="max-w column">
                 <div className="image-showcase w-100 flex">
                     <div className="carbon half flex column justify-between">
                         <h2>Services</h2>
+                        {windowWidth <= 700 ? <CarbonDescription /> : ""}
                         <div className="image-grid h-100">
                             <GridImage filename="services/0.jpg" gridArea="span 7 / span 4" />
                             <GridImage filename="services/1.jpg" gridArea="span 7 / span 3" />
@@ -79,19 +88,23 @@ export default function Services() {
                         </div>
                     </div>
                     <div className="paint half">
+                        {windowWidth <= 700 ? <PaintDescription /> : ""}
                         <div className="image-grid h-100">
                             <GridImage filename="services/6.jpg" gridArea="span 5 / span 7" />
                             <GridImage filename="services/7.jpg" gridArea="span 3 / span 6" />
-                            <GridImage filename="services/8.jpg" gridArea="span 8 / span 7" />
                             <GridImage filename="services/9.jpg" gridArea="span 10 / span 6" />
+                            <GridImage filename="services/8.jpg" gridArea="span 8 / span 7" />
                         </div>
                     </div>
+                    {windowWidth <= 700 ? <DecalDescription /> : ""}
                 </div>
-                <div className="description-container">
-                    <CarbonDescription />
-                    <PaintDescription />
-                    <DecalDescription />
-                </div>
+                {windowWidth > 700 ?
+                    <div className="description-container">
+                        <CarbonDescription />
+                        <PaintDescription />
+                        <DecalDescription />
+                    </div>
+                : ""}
                 <MiscInfo />
             </div>
         </section>

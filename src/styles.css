@@ -101,15 +101,19 @@ html {
     font-weight: normal;
 }
 
-h2, h3 {
-	font-weight: normal;
-	color: var(--bask-blue);
-	letter-spacing: 0.03em;
+body {
+    background-color: #f4f4f3;
 }
 
 h1 {
 	font-size: 3rem;
 	line-height: 3rem;
+}
+
+h2, h3 {
+	font-weight: normal;
+	color: var(--bask-blue);
+	letter-spacing: 0.03em;
 }
 
 h2 {

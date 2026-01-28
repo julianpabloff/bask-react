@@ -35,7 +35,7 @@ function TextInput({ name, label, big, textarea, required }: TextInputProps) {
 }
 
 function Form() {
-    function handleSubmit(formData) {
+    function handleSubmit(formData: FormData): void {
         console.log('firstname:', formData.get('firstname'));
     }
 

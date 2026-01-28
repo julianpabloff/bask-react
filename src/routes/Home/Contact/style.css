@@ -63,11 +63,11 @@ button {
     transition: background-color 0.2s;
 }
 
-button:hover {
+button:hover, button:focus {
     background-color: var(--bask-purple);
 }
 
-input:focus, textarea:focus {
+form *:focus {
     outline: 0.3em solid var(--bask-blue);
 }
 

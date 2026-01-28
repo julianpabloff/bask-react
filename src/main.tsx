@@ -7,7 +7,7 @@ import Home from './routes/Home';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <BrowserRouter>
+        <BrowserRouter basename="/bask-react">
             <Routes>
                 <Route element={<Layout/>}>
                     <Route path="/" element={<Home/>}/>

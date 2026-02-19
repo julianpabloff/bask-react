@@ -2,13 +2,14 @@ header {
     /* height: 160px; */
     padding: 15px 0;
     position: fixed;
+    top: 0;
     color: white;
     /* background-color: #002e414f; */
     transition: background-color 0.2s ease-out;
 }
 
 img.logo {
-    height: min(150px, 15vw);
+    height: min(130px, 15vw);
     min-height: 80px;
 }
 

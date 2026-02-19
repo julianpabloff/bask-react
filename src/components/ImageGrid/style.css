@@ -1,0 +1,14 @@
+div.image-grid {
+	width: 100%;
+	padding: 0 var(--side-padding);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+	margin-bottom: 150px;
+}
+
+div.image-grid img {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}

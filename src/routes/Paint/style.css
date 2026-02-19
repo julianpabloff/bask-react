@@ -1,0 +1,39 @@
+section.paint-page div.heading {
+	margin: 250px 0 130px 0;
+}
+
+section.paint-page h1 {
+	margin-bottom: 0.75em;
+}
+
+section.paint-page p {
+	max-width: 63rem;
+}
+
+section.paint-page p:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+section.paint-page div.text-container {
+	max-width: 70rem;
+	gap: 3rem;
+}
+
+section.paint-page div.text-container div:first-child {
+	width: 60%;
+}
+
+@media screen and (max-width: 800px) {
+	section.paint-page div.image-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0.5rem;
+	}
+
+	section.paint-page div.text-container {
+		flex-direction: column;
+	}
+
+	section.paint-page div.text-container div:first-child {
+		width: initial;
+	}
+}

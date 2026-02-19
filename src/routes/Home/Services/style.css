@@ -7,26 +7,26 @@ div.image-showcase {
     gap: 1rem;
 }
 
-section.services div.image-grid {
+section.services div.custom-image-grid {
 	display: grid;
 	width: 100%;
 	grid-gap: 1rem;
     grid-auto-flow: dense;
 }
 
-section.services div.carbon div.image-grid {
+section.services div.carbon div.custom-image-grid {
     /* height: calc(100% - var(--h2-height)); */
     height: calc(100% - var(--h2-size) - 2rem);
 	grid-template-columns: repeat(11, 1fr);
 	grid-template-rows: repeat(12, 1fr);
 }
 
-section.services div.paint div.image-grid {
+section.services div.paint div.custom-image-grid {
 	grid-template-columns: repeat(13, 1fr);
 	grid-template-rows: repeat(13, 1fr);
 }
 
-section.services div.image-grid img {
+section.services div.custom-image-grid img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -75,7 +75,7 @@ div.misc-info p {
     div.image-showcase div.half {
         width: 100%;
     }
-    div.image-grid {
+    div.custom-image-grid {
         aspect-ratio: 1 / 1;
         height: auto;
     }

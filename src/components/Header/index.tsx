@@ -14,7 +14,7 @@ function Header() {
         const start = 0.2;
         const end = 0.7;
         const threshold = 100;
-        const newOpacity = scrollPos >= threshold ? end : start + scrollPos / threshold;
+        const newOpacity = scrollPos > threshold ? end : start + (end - start) * (scrollPos / threshold);
         setOpacity(newOpacity);
     }
     useScrollY(handleOpacity);

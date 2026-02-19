@@ -1,0 +1,22 @@
+section.carbon-page div.heading {
+	margin: 250px 0 130px 0;
+}
+
+section.carbon-page h1 {
+	margin-bottom: 0.75em;
+}
+
+section.carbon-page p {
+	max-width: 63rem;
+}
+
+section.carbon-page p:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+@media screen and (max-width: 800px) {
+	section.carbon-page div.image-grid {
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 0.5rem;
+	}
+}

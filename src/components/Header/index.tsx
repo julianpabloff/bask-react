@@ -23,7 +23,8 @@ function Header() {
         <header id="header" className="max-w-container" style={headerStyle}>
             <div className="max-w justify-between">
                 <NavLink to="/">
-                    <Image filename="logo.png" className="logo" />
+                    {/* <Image filename="logo.png" className="logo" /> */}
+                    <img className="logo" src="/bask-react/src/assets/logo.png" />
                 </NavLink>
                 <nav className="flex align-center">
                     <NavLink to="/carbon-repair">Carbon Repair</NavLink>

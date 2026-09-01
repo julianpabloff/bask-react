@@ -7,7 +7,7 @@ export interface IImage {
 }
 
 // filename is with /assets as the base folder
-const BASE_URL = import.meta.env.BASE_URL;
+// const BASE_URL = import.meta.env.BASE_URL;
 
 export default function useImage(filename: string): IImage {
     const [loading, setLoading] = useState<boolean>(true);
@@ -17,10 +17,10 @@ export default function useImage(filename: string): IImage {
     useEffect(() => {
         async function fetchImage() {
             try {
-                console.log(`importing from ${BASE_URL}src/assets/${filename}`);
-                const response: any = await import(/* @vite-ignore */`${BASE_URL}assets/${filename}`);
+                // console.log(`importing from assets/${filename}`);
+                const response: any = await import(/* @vite-ignore */`../assets/${filename}`);
                 setSrc(response.default);
-                console.log('response:' + response.default);
+                // console.log('response:' + response.default);
             } catch (error) {
                 setError(error);
             } finally {

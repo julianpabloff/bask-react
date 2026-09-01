@@ -16,7 +16,7 @@ export default function useImage(filename: string): IImage {
     useEffect(() => {
         async function fetchImage() {
             try {
-                const response: any = await import(/* @vite-ignore */`../assets/${filename}`);
+                const response: any = await import(/* @vite-ignore */`../src/assets/${filename}`);
                 setSrc(response.default);
                 console.log(response.default);
             } catch (error) {

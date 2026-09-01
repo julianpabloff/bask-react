@@ -2,7 +2,7 @@ import { useState } from 'react';
 import useScrollY from '../../utils/useScrollY';
 
 import { NavLink } from 'react-router';
-// import Image from '../../components/Image';
+import Image from '../../components/Image';
 
 import './style.css';
 
@@ -23,8 +23,7 @@ function Header() {
         <header id="header" className="max-w-container" style={headerStyle}>
             <div className="max-w justify-between">
                 <NavLink to="/">
-                    {/* <Image filename="logo.png" className="logo" /> */}
-                    <img className="logo" src="/bask-react/src/assets/logo.png" />
+                    <Image filename="logo.png" className="logo" />
                 </NavLink>
                 <nav className="flex align-center">
                     <NavLink to="/carbon-repair">Carbon Repair</NavLink>

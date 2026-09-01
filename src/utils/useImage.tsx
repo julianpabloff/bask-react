@@ -18,7 +18,7 @@ export default function useImage(filename: string): IImage {
         async function fetchImage() {
             try {
                 console.log(`importing from ${BASE_URL}src/assets/${filename}`);
-                const response: any = await import(/* @vite-ignore */`../assets/${filename}`);
+                const response: any = await import(/* @vite-ignore */`${BASE_URL}assets/${filename}`);
                 setSrc(response.default);
                 console.log('response:' + response.default);
             } catch (error) {

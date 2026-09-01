@@ -2,7 +2,7 @@ import { useState } from 'react';
 import useScrollY from '../../utils/useScrollY';
 
 import { NavLink } from 'react-router';
-import Image from '../../components/Image';
+// import Image from '../../components/Image';
 
 import './style.css';
 

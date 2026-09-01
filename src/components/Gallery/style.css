@@ -1,0 +1,19 @@
+div.gallery-container {
+	width: 100%;
+	height: 450px;
+	padding: 50px;
+	margin-bottom: 150px;
+	display: flex;
+	justify-content: flex-start;
+	background-color: black;
+	overflow-x: hidden;
+}
+
+div.gallery-container div.images-container {
+	display: flex;
+	gap: 40px;
+	transform: translateX(0);
+}
+
+div.gallery-container img {
+}

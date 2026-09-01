@@ -9,7 +9,8 @@ import Paint from './routes/Paint';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <BrowserRouter basename="/bask-react">
+        {/* <BrowserRouter basename="/bask-react"> */}
+        <BrowserRouter>
             <Routes>
                 <Route element={<Layout />}>
                     <Route path="/" element={<Home />}/>

@@ -1,4 +1,7 @@
 import ImageGrid from '../../components/ImageGrid';
+import Image from '../../components/Image';
+import Gallery from '../../components/Gallery';
+import GalleryGrid from '../../components/GalleryGrid';
 
 import './style.css';
 
@@ -24,7 +27,14 @@ export default function Paint() {
                         </div>
                     </div>
                 </div>
-                <ImageGrid folderPath="paint" amount={49} extension="webp" />
+                <Gallery filenames={[
+                    "paint/0.webp",
+                    "paint/1.webp",
+                    "paint/2.webp",
+                    "paint/3.webp"
+                ]} height={450}>
+                </Gallery>
+                {/* <ImageGrid folderPath="paint" amount={49} extension="webp" /> */}
             </section>
         </>
     );

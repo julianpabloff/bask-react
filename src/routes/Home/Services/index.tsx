@@ -57,10 +57,10 @@ function MiscInfo() {
                 ? <p className="top-right">YOU CAN FIND MORE INFORMATION AND PORTFOLIO WITH THE LINKS ON THE TOP RIGHT</p>
                 : <p className="top-right">YOU CAN FIND MORE INFORMATION AND PORTFOLIO WITH THE LINKS AT THE TOP</p>
             }
-            <p>Preferred vendor for:
-                <a href="http://www.austintricyclist.com/">Austin Tricyclist</a>,
-                <a href="https://austinbikefarm.com/">Austin Bike Farm</a>,
-                <a href="https://dogspeedcycles.com/">Dog Speed Cycles</a>,
+            <p>Preferred vendor for:<span> </span>
+                <a href="http://www.austintricyclist.com/">Austin Tri-Cyclist</a>,<span> </span>
+                <a href="https://austinbikefarm.com/">Austin Bike Farm</a>,<span> </span>
+                <a href="https://dogspeedcycles.com/">Dog Speed Cycles</a>,<span> </span>
                 <a href="https://themeteor.cafe/bike">The Meteor (Austin)</a>
             </p>
             <p>And I have worked with <a href="https://www.specialized.com/us/en/store-finder/specialized-austin-south-warehouse/6405484">Specialized Austin</a></p>

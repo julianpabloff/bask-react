@@ -1,5 +1,8 @@
 {
   "name": "bask-react",
+  "homepage": "https://gh-pages.github.io/bask-react/",
+  "build": "vite build && cp dist/index.html dist/404.html",
+  "deploy": "gh-pages -d dist",
   "private": true,
   "version": "0.0.0",
   "type": "module",

@@ -13,7 +13,9 @@ interface GridImageProps {
 function GridImage({ filename, alt, gridArea }: GridImageProps) {
     const imageStyle = { gridArea };
     return (
-        <Image filename={filename} alt={alt} style={imageStyle} />
+        <div className="image-container" style={imageStyle}>
+            <Image filename={filename} alt={alt} />
+        </div>
     );
 }
 
@@ -81,7 +83,7 @@ export default function Services() {
                     <div className="carbon half flex column justify-between">
                         <h2>Services</h2>
                         {windowWidth <= 700 ? <CarbonDescription /> : ""}
-                        <div className="custom-image-grid h-100">
+                        <div className="custom-image-grid">
                             <GridImage filename="services/0.jpg" gridArea="span 7 / span 4" />
                             <GridImage filename="services/1.jpg" gridArea="span 7 / span 3" />
                             <GridImage filename="services/2.jpg" gridArea="span 7 / span 4" />
@@ -92,7 +94,7 @@ export default function Services() {
                     </div>
                     <div className="paint half">
                         {windowWidth <= 700 ? <PaintDescription /> : ""}
-                        <div className="custom-image-grid h-100">
+                        <div className="custom-image-grid">
                             <GridImage filename="services/6.jpg" gridArea="span 5 / span 7" />
                             <GridImage filename="services/7.jpg" gridArea="span 3 / span 6" />
                             <GridImage filename="services/9.jpg" gridArea="span 10 / span 6" />

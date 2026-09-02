@@ -1,17 +1,17 @@
+import useWindowWidth from '../../../utils/useWindowWidth';
 import Image from '../../../components/Image';
-import s5 from '../../../assets/s5.jpg';
-import s5Mobile from '../../../assets/s5-mobile.jpg';
 
 import './style.css';
 
 export default function Landing() {
+    let windowWidth = useWindowWidth();
+
     return (
         <section className="landing-images">
-            <picture>
-                <source media="(width <= 600px)" srcSet={s5Mobile} />
-                <source media="(width > 600px)" srcSet={s5} />
-                <img className="main" src={s5} alt="Cervelo S5" />
-            </picture>
+            {windowWidth > 600
+                ? <Image filename="s5.jpg" alt="Cervelo S5" className="main" />
+                : <Image filename="s5-mobile.jpg" alt="Cervelo S5" className="main" />
+            }
             <div className="landing-grid flex">
                 <div className="half">
                     <Image className="w-100" filename="landing0.jpg" />

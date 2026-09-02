@@ -20,7 +20,7 @@ export default function useImage(filename: string): IImage {
                 // console.log(`importing from assets/${filename}`);
                 const response: any = await import(/* @vite-ignore */`../assets/${filename}`);
                 setSrc(response.default);
-                // console.log('response:' + response.default);
+                console.log('response:' + response.default);
             } catch (error) {
                 setError(error);
             } finally {

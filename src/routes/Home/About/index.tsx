@@ -7,7 +7,7 @@ export default function About() {
         <section className="about max-w-container">
             <div className="max-w">
                 <div className="image half flex justify-center">
-                    <Image filename="jump.jpg" className="w-100" />
+                    <Image filename="profile.jpg" className="w-100" />
                 </div>
                 <div className="text half flex column justify-center">
                     <h2>About Bask</h2>

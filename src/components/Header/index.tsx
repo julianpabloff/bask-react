@@ -19,15 +19,19 @@ function Header() {
     }
     useScrollY(handleOpacity);
 
+    function scrollUp() {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <header id="header" className="max-w-container" style={headerStyle}>
             <div className="max-w justify-between">
-                <NavLink to="/">
+                <NavLink to="/" onClick={scrollUp}>
                     <Image filename="logo.png" className="logo" />
                 </NavLink>
                 <nav className="flex align-center">
-                    <NavLink to="/carbon-repair">Carbon Repair</NavLink>
-                    <NavLink to="/custom-paint">Custom Paint</NavLink>
+                    <NavLink to="/carbon-repair" onClick={scrollUp}>Carbon Repair</NavLink>
+                    <NavLink to="/custom-paint" onClick={scrollUp}>Custom Paint</NavLink>
                 </nav>
             </div>
         </header>

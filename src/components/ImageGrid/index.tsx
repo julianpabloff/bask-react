@@ -16,8 +16,8 @@ export default function ImageGrid({ folderPath, amount, extension, imageWidth, i
 
     for (let i = 0; i < amount; i++) {
         const filename: string = `${folderPath}/${i}.${extension}`;
-        const props: ImageProps = { key: i, filename, imageWidth, imageHeight };
-        images.push(<Image {...props} />);
+        const props: ImageProps = { filename, imageWidth, imageHeight };
+        images.push(<Image key={i} {...props} />);
     }
 
     return (

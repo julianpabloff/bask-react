@@ -51,6 +51,14 @@ div.service-description p:not(:last-child) {
     margin-bottom: 1.5rem;
 }
 
+div.service-description img {
+    width: 100%;
+}
+
+p.caption {
+    font-size: 0.8rem;
+}
+
 div.misc-info {
     max-width: 47rem;
     align-self: center;

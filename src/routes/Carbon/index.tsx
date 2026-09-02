@@ -14,7 +14,7 @@ export default function Carbon() {
                         <p>A majority of repairs will be $200 - $400 but it can get more expensive depending on severity and paint matching, I’m happy to provide an estimate with photos but the extent of damage is never known until a there is a full frame inspection in the workshop.</p>
                     </div>
                 </div>
-                <ImageGrid folderPath="carbon" amount={77} extension="webp" />
+                <ImageGrid folderPath="carbon" amount={77} extension="webp" imageWidth={1500} imageHeight={2000} />
             </section>
         </>
     );

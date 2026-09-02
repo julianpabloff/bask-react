@@ -7,10 +7,24 @@ footer * {
     color: white;
 }
 
-footer h1 {
+footer div.title {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
     margin-bottom: 1rem;
+}
+
+footer img {
+    position: relative;
+    bottom: 0.1rem;
+    height: 1.5rem;
 }
 
 footer p {
     color: black;
+}
+
+footer span.hyphen {
+    color: inherit;
+    margin: 0 0.7rem;
 }

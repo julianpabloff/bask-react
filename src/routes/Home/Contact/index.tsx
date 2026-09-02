@@ -4,13 +4,15 @@ function ContactInfo() {
     return (
         <div className="flex column half">
             <h2>Contact Us</h2>
-            <p>Fill out your info here to get a quote on any type of work or if you have any questions.</p>
-            <p>Email: <a href="mailto:johnw@baskbikes.com" target="_blank">JohnW@BaskBikes.com</a></p>
+            <p>Email <a href="mailto:johnw@baskbikes.com" target="_blank">JohnW@BaskBikes.com</a> for all inquiries.</p>
+            <p>PLEASE include your name and relevant photos.</p>
+            <p>Happy to give a quote on any type of work or answer any questions.</p>
             <p>Instagram: <a href="https://www.instagram.com/baskbikes/" target="_blank">@BaskBikes</a></p>
         </div>
     );
 }
 
+/*
 interface TextInputProps {
     name: string; // for the formData
     label: string; // label above the input
@@ -49,13 +51,14 @@ function Form() {
         </form>
     );
 }
+*/
 
 export default function Contact() {
     return (
         <section className="contact max-w-container">
             <div className="max-w">
                 <ContactInfo />
-                <Form />
+                {/* <Form /> */}
             </div>
         </section>
     );

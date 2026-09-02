@@ -23,6 +23,8 @@ function CarbonDescription() {
             <h3>Carbon Repair</h3>
             <p>$200 - $600 for most repairs</p>
             <p>I will repair most damage to carbon frames and blend it into the original paint. Contact me with photos for an estimate. I provide a 2-3 week turn around depending on the job but it can take 2 - 8 weeks for me to be able to take it into the shop. Rush turn around is available.</p>
+            <Image filename="car-repair.jpg" alt="Inception Racing carbon repair" className="mb-3" />
+            <p className="caption">Current carbon tech on a Ferrari 296 GT3 for Inception Racing.</p>
         </div>
     );
 }
@@ -51,6 +53,7 @@ function DecalDescription() {
 
 function MiscInfo() {
     let windowWidth = useWindowWidth();
+
     return (
         <div className="misc-info">
             {windowWidth > 700

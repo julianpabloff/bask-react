@@ -1,0 +1,91 @@
+div.project {
+	width: 100%;
+	margin-bottom: 100px;
+	padding-top: 4rem;
+	position: relative;
+	color: white;
+	overflow: hidden;
+}
+
+div.project img.background {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	opacity: 0.25;
+	top: 0;
+	left: 0;
+}
+
+div.project-content {
+	position: relative;
+	z-index: 1;
+}
+
+div.project-content div.main {
+	padding: 0 var(--side-padding);
+	display: flex;
+	gap: max(2rem, 5%);
+	margin-bottom: 3rem;
+}
+
+div.project div.text {
+	min-width: 50%;
+}
+
+div.project div.text h1 {
+	background-color: white;
+	width: min-content;
+	white-space: nowrap;
+	padding: 0.1em 0.5em;
+	margin-bottom: 0.5em;
+	color: var(--bask-purple);
+	text-shadow: 0.1em 0 var(--bask-blue);
+}
+
+div.project div.feature-image {
+	max-width: 550px;
+	height: min-content;
+	align-self: center;
+	/* background-color: var(--bask-purple); */
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+div.project div.feature-image.small {
+	width: calc(100% - 31px); /* 23px left + 8px outline = 31px */
+	max-width: 450px;
+	margin: 3rem 0 1rem 0;
+}
+
+div.project div.feature-image img {
+	width: 100%;
+	position: relative;
+	left: 23px;
+	bottom: 18px;
+	outline: 8px solid white;
+}
+
+div.project div.carousel {
+	width: 100%;
+	padding: 1.5rem var(--side-padding);
+	display: flex;
+	gap: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.4);
+	overflow-x: scroll;
+}
+
+div.project div.carousel img {
+	height: 8rem;
+}
+
+@media screen and (max-width: 700px) {
+	div.project div.main {
+		flex-direction: column;
+	}
+	div.project div.text h1 {
+		font-size: 2rem;
+	}
+	div.project div.carousel img {
+		height: 5rem;
+	}
+}

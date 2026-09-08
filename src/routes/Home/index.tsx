@@ -5,12 +5,12 @@ import Contact from './Contact';
 
 function Home() {
     return (
-        <>
+        <main>
             <Landing />
             <Services />
             <About />
             <Contact />
-        </>
+        </main>
     );
 }
 

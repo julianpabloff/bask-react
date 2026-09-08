@@ -1,0 +1,55 @@
+import { useEffect, useState } from 'react';
+import useWindowWidth from '../../../utils/useWindowWidth';
+
+import Image from '../../../components/Image';
+
+import './style.css';
+
+interface ProjectProps {
+    title: string // Trek Madone
+    folderPath: string; // 'paint/project/madone'
+    imageCount: number; // 8
+    themeColor: string; // #001c3f
+    children: any; // the <p>description</p> tags
+}
+
+export default function Project({ title, folderPath, imageCount, themeColor, children }: ProjectProps) {
+    const [carouselImages, setCarouselImages] = useState<any[]>([]);
+    let windowWidth = useWindowWidth();
+
+    useEffect(() => {
+        const array: any[] = [];
+        for (let i = 0; i < imageCount; i++)
+            array.push(<Image filename={`${folderPath}/thumb${i}.webp`} />);
+        setCarouselImages(array);
+    }, []);
+
+    const backgroundStyle = { background: `linear-gradient(to top, black, ${themeColor})` };
+
+    return (
+        <div className="project" style={backgroundStyle}>
+            <div className="project-content">
+                <div className="main">
+                    <div className="text">
+                        <h1>{title}</h1>
+                        {windowWidth <= 700 ?
+                            <div className="feature-image small">
+                                <Image filename={`${folderPath}/feature.webp`} />
+                            </div>
+                        : ''}
+                        {children}
+                    </div>
+                    {windowWidth > 700 ?
+                        <div className="feature-image">
+                            <Image filename={`${folderPath}/feature.webp`} />
+                        </div>
+                    : ''}
+                </div>
+                <div className="carousel">
+                    {...carouselImages}
+                </div>
+            </div>
+            <Image filename={`${folderPath}/background.webp`} className="background" />
+        </div>
+    );
+}

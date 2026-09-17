@@ -25,6 +25,7 @@ div.project-content {
 div.project-content div.main {
 	padding: 0 var(--side-padding);
 	display: flex;
+	justify-content: center;
 	gap: max(2rem, 5%);
 	margin-bottom: 3rem;
 }
@@ -52,30 +53,31 @@ div.project div.feature-image {
 }
 
 div.project div.feature-image.small {
-	width: calc(100% - 31px); /* 23px left + 8px outline = 31px */
-	max-width: 450px;
-	margin: 3rem 0 1rem 0;
+	/* width: calc(100% - 31px); /1* 23px left + 8px outline = 31px *1/ */
+	max-width: none;
+	width: 100%;
+	margin: 3rem 0;
 }
 
 div.project div.feature-image img {
 	width: 100%;
-	position: relative;
-	left: 23px;
-	bottom: 18px;
-	outline: 8px solid white;
+	/* position: relative; */
+	/* left: 23px; */
+	/* bottom: 18px; */
+	border: 8px solid white;
 }
 
 div.project div.carousel {
 	width: 100%;
-	padding: 1.5rem var(--side-padding);
+	padding: 1.5rem;
 	display: flex;
-	gap: 1.5rem;
+	gap: 25px;
 	background-color: rgba(0, 0, 0, 0.4);
-	overflow-x: scroll;
+	overflow-x: hidden;
 }
 
 div.project div.carousel img {
-	height: 8rem;
+	width: 200px;
 }
 
 @media screen and (max-width: 700px) {
@@ -83,9 +85,10 @@ div.project div.carousel img {
 		flex-direction: column;
 	}
 	div.project div.text h1 {
-		font-size: 2rem;
+		font-size: 2.5rem;
 	}
 	div.project div.carousel img {
-		height: 5rem;
+		width: 150px;
+		/* height: 5rem; */
 	}
 }

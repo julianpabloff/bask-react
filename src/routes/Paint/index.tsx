@@ -36,26 +36,26 @@ export default function Paint() {
                     <p>After applying those shapes to the frame, I painted it and then they were there on the frame, you know. I don't know, man...</p>
                     <p>This space is for if you want to talk about the project at all, the client exchange, story behind it, or parts of the process you want to brag about.</p>
                 </Project>
-                {/* <Project */}
-                {/*     title="Trek Madone" */}
-                {/*     folderPath="paint/projects/madone" */}
-                {/*     imageCount={8} */}
-                {/*     themeColor="#0b77a9" */}
-                {/* > */}
-                {/*     <p>For this project I took a Trek Madong and took off all the shitty paint. Then I made a design mockup of a bunch of shapes you would see in some psychological visual test to determine if someone was retarded or not.</p> */}
-                {/*     <p>After applying those shapes to the frame, I painted it and then they were there on the frame, you know. I don't know, man...</p> */}
-                {/*     <p>This space is for if you want to talk about the project at all, the client exchange, story behind it, or parts of the process you want to brag about.</p> */}
-                {/* </Project> */}
-                {/* <Project */}
-                {/*     title="UTP5" */}
-                {/*     folderPath="paint/projects/utp5" */}
-                {/*     imageCount={11} */}
-                {/*     themeColor="rgb(153, 72, 0)" */}
-                {/* > */}
-                {/*     <p>Some old guy that never will ride this bike wanted me to go through countless hours of effort to paint a Cervelo P5 in the theme colors of the University of Texas.</p> */}
-                {/*     <p>It's just orange and white, so I painted some parts of the bike orange, while painting all other parts of the bike white. Idiot.</p> */}
-                {/*     <p>This space is for if you want to talk about the project at all, the client exchange, story behind it, or parts of the process you want to brag about.</p> */}
-                {/* </Project> */}
+                <Project
+                    title="Trek Madone"
+                    folderPath="paint/projects/madone"
+                    imageCount={8}
+                    themeColor="#0b77a9"
+                >
+                    <p>For this project I took a Trek Madong and took off all the shitty paint. Then I made a design mockup of a bunch of shapes you would see in some psychological visual test to determine if someone was retarded or not.</p>
+                    <p>After applying those shapes to the frame, I painted it and then they were there on the frame, you know. I don't know, man...</p>
+                    <p>This space is for if you want to talk about the project at all, the client exchange, story behind it, or parts of the process you want to brag about.</p>
+                </Project>
+                <Project
+                    title="UTP5"
+                    folderPath="paint/projects/utp5"
+                    imageCount={11}
+                    themeColor="rgb(153, 72, 0)"
+                >
+                    <p>Some old guy that never will ride this bike wanted me to go through countless hours of effort to paint a Cervelo P5 in the theme colors of the University of Texas.</p>
+                    <p>It's just orange and white, so I painted some parts of the bike orange, while painting all other parts of the bike white. Idiot.</p>
+                    <p>This space is for if you want to talk about the project at all, the client exchange, story behind it, or parts of the process you want to brag about.</p>
+                </Project>
                 <ImageGrid folderPath="paint" amount={49} extension="webp" imageWidth={1500} imageHeight={1125} />
             </section>
         </main>

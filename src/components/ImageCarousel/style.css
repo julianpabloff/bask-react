@@ -1,0 +1,19 @@
+div.image-carousel {
+	width: 100%;
+	padding: 1.5rem;
+	display: flex;
+	gap: 25px;
+	background-color: rgba(0, 0, 0, 0.4);
+	overflow-x: hidden;
+}
+
+div.image-carousel img {
+	width: 200px;
+}
+
+@media screen and (max-width: 700px) {
+	div.image-carousel img {
+		width: 150px;
+		/* height: 5rem; */
+	}
+}

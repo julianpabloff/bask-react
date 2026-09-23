@@ -5,12 +5,43 @@ import Image from '../Image';
 
 import './style.css';
 
+interface CarouselImageProps {
+    folderPath: string;
+    index: number;
+    onGalleryView: (i: number) => void;
+}
+
+function CarouselImage({ folderPath, index, onGalleryView }: CarouselImageProps) {
+    const imageRef = useRef<any>(null);
+    const filename = `${folderPath}/thumb${index}.webp`;
+
+    function handleClick() {
+        imageRef.current.style.transform = 'scale(1.5)';
+        imageRef.current.style.opacity = '0';
+
+        // Reset image (gallery takes 400 ms to open)
+        setTimeout(() => imageRef.current.style.transition = 'none', 400);
+        setTimeout(() => {
+            imageRef.current.style.transform = 'initial';
+            imageRef.current.style.opacity = '1';
+        }, 405);
+        setTimeout(() => imageRef.current.style.transition = 'all 0.2s', 410);
+
+        onGalleryView(index);
+    }
+
+    return (
+        <Image ref={imageRef} filename={filename} onClick={handleClick} />
+    );
+}
+
 interface ImageCarouselProps {
     folderPath: string; // 'paint/project/madone'
     imageCount: number; // 8
+    onGalleryView: (i: number) => void;
 }
 
-export default function ImageCarousel({ folderPath, imageCount }: ImageCarouselProps) {
+export default function ImageCarousel({ folderPath, imageCount, onGalleryView }: ImageCarouselProps) {
     const [carouselImages, setCarouselImages] = useState<any[]>([]);
 
     // Refs
@@ -44,17 +75,14 @@ export default function ImageCarousel({ folderPath, imageCount }: ImageCarouselP
         if (additional < 1) return;
 
         for (let i = 0; i < additional; i++) addImage();
+        // containerRef.current.style.transform = 'translateX(0)';
     }
     useWindowWidth(handleWindowWidth);
-
-    function expand(imageIndex: number) {
-        console.log('expanding to gallery at imageIndex', imageIndex);
-    }
 
     function initImages() {
         const array: any[] = [];
         for (let i = 0; i < imageCount; i++) {
-            array.push(<Image filename={`${folderPath}/thumb${i}.webp`} onClick={() => expand(i)} />);
+            array.push(<CarouselImage folderPath={folderPath} index={i} onGalleryView={onGalleryView} />);
         }
         setCarouselImages(array);
         imagesRef.current = array;

@@ -30,7 +30,7 @@ export default function Paint() {
                     title="The Bask Bike"
                     folderPath="paint/projects/baskbike"
                     imageCount={4}
-                    themeColor="rgba(34, 0, 95, 0.76)"
+                    themeColor="rgb(34, 0, 95)"
                 >
                     <p>For this project I took a Trek Madong and took off all the shitty paint. Then I made a design mockup of a bunch of shapes you would see in some psychological visual test to determine if someone was retarded or not.</p>
                     <p>After applying those shapes to the frame, I painted it and then they were there on the frame, you know. I don't know, man...</p>

@@ -52,6 +52,7 @@ textarea {
     max-height: 16rem;
 }
 
+/*
 button {
     width: min-content;
     white-space: nowrap;
@@ -66,6 +67,7 @@ button {
 button:hover, button:focus {
     background-color: var(--bask-purple);
 }
+*/
 
 form *:focus {
     outline: 0.3em solid var(--bask-blue);

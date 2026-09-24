@@ -14,11 +14,12 @@ div.image-carousel div.images-container {
 
 div.image-carousel img {
 	width: 200px;
-	transition: all 0.2s;
+	aspect-ratio: 3 / 2;
+	transition: all 0.3s;
 }
 
 div.image-carousel img:hover {
-	filter: brightness(75%);
+	filter: brightness(70%);
 	cursor: pointer;
 }
 

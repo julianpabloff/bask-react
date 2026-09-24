@@ -23,9 +23,8 @@ div.project-content {
 }
 
 div.project-content div.main {
-	/* padding: 0 var(--side-padding); */
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	gap: max(2rem, 5%);
 	margin-bottom: 3rem;
 }
@@ -42,6 +41,7 @@ div.project h1 {
 	margin-bottom: 0.5em;
 	color: var(--bask-purple);
 	text-shadow: 0.1em 0 var(--bask-blue);
+	box-shadow: 0.2em 0.2em var(--bask-purple); /* change to themeColor */
 	opacity: 0;
 }
 
@@ -57,22 +57,8 @@ div.project div.floating-title-container h1 {
 }
 
 div.project div.floating-title-container div.gallery-exit {
-	width: 3.2rem;
-	height: 3.2rem;
-	padding-right: 0.2rem;
-	/* display: flex; */
-	justify-content: center;
-	align-items: center;
-	font-size: 3rem;
-	font-weight: bold;
-	cursor: pointer;
-	color: var(--bask-purple);
-	text-shadow: 0.1em 0 var(--bask-blue);
-	user-select: none;
-	background-color: white;
 	display: none;
 	opacity: 0;
-	transition: opacity 0.2s;
 }
 
 div.project div.feature-image {
@@ -92,26 +78,8 @@ div.project div.feature-image.small {
 
 div.project div.feature-image img {
 	width: 100%;
-	/* position: relative; */
-	/* left: 23px; */
-	/* bottom: 18px; */
 	border: 8px solid white;
 }
-
-/*
-div.project div.image-carousel {
-	width: 100%;
-	padding: 1.5rem;
-	display: flex;
-	gap: 25px;
-	background-color: rgba(0, 0, 0, 0.4);
-	overflow-x: hidden;
-}
-
-div.project div.image-carousel img {
-	width: 200px;
-}
-*/
 
 @media screen and (max-width: 700px) {
 	div.project div.main {
@@ -120,9 +88,4 @@ div.project div.image-carousel img {
 	div.project h1 {
 		font-size: 2.3rem;
 	}
-	/*
-	div.project div.image-carousel img {
-		width: 150px;
-	}
-	*/
 }

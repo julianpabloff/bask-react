@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import useWindowWidth from '../../../utils/useWindowWidth';
+import useAnimateInOut from '../../../utils/useAnimateInOut';
 
 import Image from '../../../components/Image';
 import ImageCarousel from '../../../components/ImageCarousel';
@@ -16,24 +17,28 @@ interface ProjectProps {
 }
 
 export default function Project({ title, folderPath, imageCount, themeColor, children }: ProjectProps) {
-    const [galleryActive, setGalleryActive] = useState<boolean>(false);
-    const exitRef = useRef<any>(null);
     let windowWidth = useWindowWidth();
+    const [galleryActive, setGalleryActive] = useState<boolean>(false);
+    const [galleryIndex, setGalleryIndex] = useState<number>(0);
 
+    // Refs
+    const h1Ref = useRef<any>(null);
+    const exitRef = useRef<any>(null);
+    const exitAnimate = useAnimateInOut(exitRef, 'flex', 200, { inDelay: 400 });
+
+    // themeColor styles
     const backgroundStyle = { background: `linear-gradient(to top, black, ${themeColor})` };
+    const shadowStyle = { boxShadow: `0.7rem 0.5rem ${themeColor}` };
 
     function openGallery(imageIndex: number) {
-        console.log('opening gallery...', imageIndex);
+        setGalleryIndex(imageIndex);
         setGalleryActive(true);
-        exitRef.current.style.display = 'flex';
-        setTimeout(() => exitRef.current.style.opacity = '1', 200);
+        exitAnimate.in(); // but only for desktop view
     }
 
     function closeGallery() {
-        console.log('closing gallery...');
         setGalleryActive(false);
-        exitRef.current.style.opacity = '0';
-        setTimeout(() => exitRef.current.style.display = 'none', 220);
+        exitAnimate.out(); // but only for desktop view
     }
 
     return (
@@ -47,9 +52,7 @@ export default function Project({ title, folderPath, imageCount, themeColor, chi
                                 <Image filename={`${folderPath}/feature.webp`} />
                             </div>
                         : ''}
-                        <div className="children-container">
-                            {children}
-                        </div>
+                        {children}
                     </div>
                     {windowWidth > 700 ?
                         <div className="feature-image">
@@ -61,12 +64,19 @@ export default function Project({ title, folderPath, imageCount, themeColor, chi
             </div>
             <div className="floating-title-container max-w-container">
                 <div className="max-w justify-between align-center">
-                    <h1 className="max-w">{title}</h1>
-                    <div ref={exitRef} className="gallery-exit" onClick={closeGallery}>X</div>
+                    <h1 ref={h1Ref} style={shadowStyle} className="max-w">{title}</h1>
+                    <div ref={exitRef} className="gallery-exit text-button" onClick={closeGallery}>X</div>
                 </div>
             </div>
             <Image filename={`${folderPath}/background.webp`} className="background" />
-            <Gallery active={galleryActive} folderPath={folderPath} themeColor={themeColor} onExit={closeGallery} />
+            <Gallery
+                active={galleryActive}
+                index={galleryIndex}
+                folderPath={folderPath}
+                imageCount={imageCount}
+                themeColor={themeColor}
+                onExit={closeGallery}
+            />
         </div>
     );
 }

@@ -147,6 +147,34 @@ img {
 	display: block;
 }
 
+div.text-button {
+	width: 3.2rem;
+	height: 3.2rem;
+	padding-right: 0.2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3rem;
+	font-weight: bold;
+	cursor: pointer;
+	color: var(--bask-purple);
+	text-shadow: 0.1em 0 var(--bask-blue);
+	user-select: none;
+	background-color: white;
+	transition: all 0.2s;
+	/* display: none; */
+	/* opacity: 0; */
+	/* transition: opacity 0.2s; */
+}
+
+div.text-button:hover {
+	box-shadow: 0.2em 0.15em var(--bask-purple); /* change to themeColor */
+}
+
+div.text-button:active {
+	transform: scale(0.9);
+}
+
 .mobile-unhide { display: none; }
 
 @media screen and (max-width: 1000px) {

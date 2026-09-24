@@ -20,12 +20,12 @@ function CarouselImage({ folderPath, index, onGalleryView }: CarouselImageProps)
         imageRef.current.style.opacity = '0';
 
         // Reset image (gallery takes 400 ms to open)
-        setTimeout(() => imageRef.current.style.transition = 'none', 400);
+        setTimeout(() => imageRef.current.style.transition = 'none', 410);
         setTimeout(() => {
             imageRef.current.style.transform = 'initial';
             imageRef.current.style.opacity = '1';
-        }, 405);
-        setTimeout(() => imageRef.current.style.transition = 'all 0.2s', 410);
+        }, 420);
+        setTimeout(() => imageRef.current.style.transition = 'all 0.2s', 430);
 
         onGalleryView(index);
     }
@@ -90,6 +90,7 @@ export default function ImageCarousel({ folderPath, imageCount, onGalleryView }:
     }
 
     function scrollOver() {
+        if (!containerRef.current) return;
         const imageUnit = imageWidth.current + imageGap;
         xRef.current++;
         if (xRef.current % imageUnit == 0) addImage();
